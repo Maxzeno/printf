@@ -70,3 +70,59 @@ int unsigned_integer(va_list list)
 		return (-1);
 	return (print_unsgined_number(num));
 }
+
+/**
+ * print_big_s - Prints a string
+ * @list: list of arguments
+ * Return: Will return the amount of characters printed.
+ */
+int print_big_s(va_list list)
+{
+        int i, count = 0;
+        char *str;
+
+        str = va_arg(list, char *);
+        if (str == NULL)
+                str = "(null)";
+        for (i = 0; str[i] != '\0'; i++)
+        {
+                if (str[i] < 32 || str[i] >= 127)
+                {
+                        count += _write_char('\\');
+                        count += _write_char('x');
+                        count += print_hex(str[i], 2);
+                }
+                else
+                {
+                        _write_char(str[i]);
+                        count++;
+                }
+        }
+        return (count);
+}
+
+/**
+ * print_hex_s - Prints an unsigned int in hexadecimal format
+ * @num: The number to print
+ * @padding: The minimum number of digits to print
+ * Return: The number of characters printed
+ */
+int print_hex_s(unsigned int num, int padding)
+{
+        int i, count = 0;
+        char hex_chars[] = "0123456789ABCDEF";
+        char hex_num[padding + 1];
+
+        hex_num[padding] = '\0';
+        for (i = padding - 1; i >= 0; i--)
+        {
+                hex_num[i] = hex_chars[num % 16];
+                num /= 16;
+        }
+        for (i = 0; i < padding; i++)
+        {
+                _write_char(hex_num[i]);
+                count++;
+        }
+        return (count);
+}

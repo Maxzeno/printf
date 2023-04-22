@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	conver_t f_list[] = {
 		{"c", print_char},
 		{"s", print_string},
-		{"S", print_string},
+		{"S", print_big_s},
 		{"%", print_percent},
 		{"d", print_integer},
 		{"i", print_integer},
