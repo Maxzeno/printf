@@ -5,6 +5,7 @@
  * @arg: Argument passed to the function
  * Return: The amount of characters printed
  */
+
 int print_reversed(va_list arg)
 {
 	int len;
@@ -28,6 +29,7 @@ int print_reversed(va_list arg)
  * @list: string to convert
  * Return: converted string
  */
+
 int rot13(va_list list)
 {
 	int i;

@@ -8,6 +8,7 @@
  * @arg_list: A list containing all the argumentents passed to the program.
  * Return: A total count of the characters printed.
  */
+
 int parser(const char *format, conver_t f_list[], va_list arg_list)
 {
 	int i, j, r_val, printed_chars;
@@ -48,5 +49,4 @@ int parser(const char *format, conver_t f_list[], va_list arg_list)
 			printed_chars++;
 		}
 	}
-	return (printed_chars);
-}
+	return (printed_chars);}

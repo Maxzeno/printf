@@ -7,6 +7,7 @@ int hex_check(int, char);
  * @list: List of arguments passed to this function
  * Return: The length of the number printed
  */
+
 int print_binary(va_list list)
 {
 	unsigned int num;
@@ -47,6 +48,7 @@ int print_binary(va_list list)
  * @list: List of all the arguments passed to the program
  * Return: Number of symbols printed to stdout
  */
+
 int print_octal(va_list list)
 {
 	unsigned int num;
@@ -87,6 +89,7 @@ int print_octal(va_list list)
  * @list: List of the arguments passed to the function
  * Return: Number of characters printed
  */
+
 int print_hex(va_list list)
 {
 	unsigned int num;
@@ -133,6 +136,7 @@ int print_hex(va_list list)
  * @list: List of the arguments passed to the function
  * Return: Number of characters printed
  */
+
 int print_heX(va_list list)
 {
 	unsigned int num;
@@ -179,6 +183,7 @@ int print_heX(va_list list)
  * @x: Tells which hex function is calling it
  * Return: Ascii value for a letter
  */
+
 int hex_check(int num, char x)
 {
 	char *hex = "abcdef";

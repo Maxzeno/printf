@@ -11,6 +11,7 @@
 * @sym: The operator
 * @f: The function associated
 */
+
 struct convert
 {
 	char *sym;
@@ -19,6 +20,7 @@ struct convert
 typedef struct convert conver_t;
 
 /*Main functions*/
+
 int parser(const char *format, conver_t f_list[], va_list arg_list);
 int _printf(const char *format, ...);
 int _write_char(char);
@@ -38,6 +40,7 @@ int print_big_s(va_list);
 int print_hex_s(unsigned int num, int padding)
 
 /*Helper functions*/
+
 unsigned int base_len(unsigned int, int);
 char *rev_string(char *);
 void write_base(char *str);

@@ -5,6 +5,7 @@
  * @ch: char to print
  * Return: Output.
  */
+
 int _putchar(char ch)
 {
 	static int contador;
